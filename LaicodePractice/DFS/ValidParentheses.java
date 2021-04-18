@@ -1,9 +1,5 @@
-package codingProblems;
-
-import java.util.ArrayList;
-
 /*
-Given N pairs of parentheses ¡°()¡±, return a list with all the valid permutations.
+Given N pairs of parentheses Â¡Â°()Â¡Â±, return a list with all the valid permutations.
 
 Assumptions: N > 0
 
@@ -29,6 +25,9 @@ Recursion tree:                              {}
 TC: O(2 ^ 2*N * N) SC: O(N)
 */
 
+package codingProblems;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class ValidParentheses {
