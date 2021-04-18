@@ -1,8 +1,3 @@
-package codingProblems;
-
-import java.util.ArrayList;
-import java.util.List;
-
 /* Given a set of characters represented by a String, return a list containing all subsets of the characters.
 
 Assumptions: There are no duplicate characters in the original set.
@@ -22,6 +17,12 @@ For B                          B  o
 For C                        C  o
 
 TC: O(2 ^ n * n) SC: O(n) */
+
+package codingProblems;
+
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class AllSubsets1 {
 	
