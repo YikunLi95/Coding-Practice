@@ -38,3 +38,5 @@ public class Solution {
     return -1;
   }
 }
+
+// TC: O(logn) SC: O(1)
