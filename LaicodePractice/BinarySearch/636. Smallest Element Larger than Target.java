@@ -26,7 +26,7 @@ public class Solution {
     while (left < right - 1) {
       int mid = left + (right - left) / 2;
       if (array[mid] <= target) {
-        left = mid;
+        left = mid + 1;
       } else {
         right = mid;
       }
