@@ -49,4 +49,4 @@ public class Solution {
   }
 }
 
-// TC: O(logn + k) SC: O(1)
+// TC: O(logn + k) SC: O(k)
