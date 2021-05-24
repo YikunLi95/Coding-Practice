@@ -16,55 +16,41 @@ public class Solution {
   public int[] mergeSort(int[] array) {
     // Write your solution here
     // corner case
-    if (array == null || array.length <= 1) {
+    if (array == null || array.length == 0) {
       return array;
     }
-    return mergeSort(array, 0, array.length - 1);
+    int[] helper = new int[array.length];
+    mergeSort(array, helper, 0, array.length - 1);
+    return array;
   }
 
-  private int[] mergeSort(int[] array, int left, int right) {
+  private void mergeSort(int[] array, int[] helper, int left, int right) {
     // base case
     if (left == right) {
-      return new int[] {array[left]};
+      return;
     }
-    // recursion rule
     int mid = left + (right - left) / 2;
-    int[] leftRes = mergeSort(array, left, mid);
-    int[] rightRes = mergeSort(array, mid + 1, right);
-    return merge(leftRes, rightRes);
+    mergeSort(array, helper, left, mid);
+    mergeSort(array, helper, mid + 1, right);
+    merge(array, helper, left, mid, right);
   }
 
-  private int[] merge(int[] leftRes, int[] rightRes) {
-    int[] res = new int[leftRes.length + rightRes.length];
-
-    // initial the 3 pointers
-    int leftIndex = 0;
-    int rightIndex = 0;
-    int resIndex = 0;
-
-    // move smaller element
-    while (leftIndex < leftRes.length && rightIndex < rightRes.length) {
-      if (leftRes[leftIndex] <= rightRes[rightIndex]) {
-        res[resIndex] = leftRes[leftIndex];
-        leftIndex++;
+  private void merge(int[] array, int[] helper, int left, int mid, int right) {
+    for (int i = left; i <= right; i++) {
+      helper[i] = array[i];
+    }
+    int leftIndex = left;
+    int rightIndex = mid + 1;
+    while (leftIndex <= mid && rightIndex <= right) {
+      if (helper[leftIndex] <= helper[rightIndex]) {
+        array[left++] = helper[leftIndex++];
       } else {
-        res[resIndex] = rightRes[rightIndex];
-        rightIndex++;
+        array[left++] = helper[rightIndex++];
       }
-      resIndex++;
     }
-    // post processing
-    while (leftIndex < leftRes.length) { // leftRes still has elements left
-      res[resIndex] = leftRes[leftIndex];
-      leftIndex++;
-      resIndex++;
+    while (leftIndex <= mid) {
+      array[left++] = helper[leftIndex++];
     }
-    while (rightIndex < rightRes.length) { // rightRes still has elements left
-      res[resIndex] = rightRes[rightIndex];
-      rightIndex++;
-      resIndex++;
-    }
-    return res;
   }
 }
 
