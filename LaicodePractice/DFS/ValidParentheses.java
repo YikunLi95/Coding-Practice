@@ -21,35 +21,33 @@ Recursion tree:                              {}
 4                                    ((())
                                        |
 5                                   ((()))
-
-TC: O(2 ^ 2*N * N) SC: O(N)
 */
 
-package codingProblems;
+public class Solution {
+  public List<String> validParentheses(int n) {
+    // Write your solution here
+    List<String> res = new ArrayList<>();
+    StringBuilder sb = new StringBuilder();
+    int left = 0;
+    int right = 0;
+    helper(res, sb, left, right, n);
+    return res;
+  }
 
-import java.util.ArrayList;
-import java.util.List;
+  private void helper(List<String> res, StringBuilder sb, int left, int right, int n) {
+    if (left == n && right == n) {
+      res.add(sb.toString());
+      return;
+    }
 
-public class ValidParentheses {
-	public List<String> validParentheses(int n) {
-		List<String> res = new ArrayList<>();
-		StringBuilder sb = new StringBuilder();
-		helper(0, 0, sb, n, res);
-		return res;
-	}
-	
-	private void helper(int left, int right, StringBuilder sb, int n, List<String> res) {
-		if (left == n && right == n) {
-			res.add(sb.toString());
-			return;
-		}
-		if (left < n) {
-			helper(left + 1, right, sb.append('('), n, res);
-			sb.deleteCharAt(sb.length() - 1);
-		}
-		if (right < left) {
-			helper(left, right + 1, sb.append(')'), n, res);
-			sb.deleteCharAt(sb.length() - 1);
-		}
-	}
-} 
+    if (left < n) {
+      helper(res, sb.append('('), left + 1, right, n);
+      sb.deleteCharAt(sb.length() - 1);
+    }
+    if (right < left) {
+      helper(res, sb.append(')'), left, right + 1, n);
+      sb.deleteCharAt(sb.length() - 1);
+    }
+  }
+}
+// TC: O(2 ^ 2n * 2n) SC: O(2n)
