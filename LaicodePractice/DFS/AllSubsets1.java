@@ -10,40 +10,39 @@ Set = null, all the subsets are []
 Recursion Tree:
                                   {}
                                   /\
-For A                            A  o
+For A(0)                         A  o
                                 /\
-For B                          B  o
+For B(1)                       B  o
                               /\
-For C                        C  o
+For C(2)                     C  o
 
-TC: O(2 ^ n * n) SC: O(n) */
+TC: O(2 ^ n * n) SC: O(n) 
+*/
 
-package codingProblems;
+public class Solution {
+  public List<String> subSets(String set) {
+    // Write your solution here.
+    List<String> res = new ArrayList<>();
+    // corner case
+    if (set == null) {
+      return res;
+    }
+    char[] arraySet = set.toCharArray();
+    StringBuilder sb = new StringBuilder();
+    helper(res, arraySet, sb, 0);
+    return res;
+  }
 
-import java.util.ArrayList;
-import java.util.List;
+  private void helper(List<String> res, char[] arraySet, StringBuilder sb, int index) {
+    if (index == arraySet.length) {
+      res.add(sb.toString());
+      return;
+    }
 
+    helper(res, arraySet, sb.append(arraySet[index]), index + 1);
+    sb.deleteCharAt(sb.length() - 1);
 
-public class AllSubsets1 {
-	
-	public List<String> allSubSets1(String set) {
-		List<String> res = new ArrayList<>();
-		if (set == null) {
-			return res;
-		}
-		char[] arraySet = set.toCharArray();
-		StringBuilder sb = new StringBuilder();
-		helper(arraySet, sb, 0, res);
-		return res;
-	}
-	
-	private void helper(char[] array, StringBuilder sb, int index, List<String> res) {
-		if (index == array.length) {
-			res.add(sb.toString()); // O(n)
-			return;
-		}
-		helper(array, sb.append(array[index]), index + 1, res);
-		sb.deleteCharAt(sb.length() - 1);
-		helper(array, sb, index + 1, res);
-	}
+    helper(res, arraySet, sb, index + 1);
+  }
 }
+// TC: O(2 ^ n * n) SC: O(n)
