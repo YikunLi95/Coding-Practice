@@ -48,3 +48,4 @@ public class Solution {
     return leftNum + rightNum + 1;
   }
 }
+// TC: O(n) SC: O(height)
