@@ -28,4 +28,4 @@ public class Solution {
     return fibFound[K];
   }
 }
-// TC: O(n) SC: O(n)
+// TC: O(K) SC: O(K)
