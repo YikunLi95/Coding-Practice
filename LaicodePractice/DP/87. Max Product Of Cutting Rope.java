@@ -11,16 +11,15 @@ n = 12, the max product is 3 * 3 * 3 * 3 = 81(cut the rope into 4 pieces with le
 public class Solution {
   public int maxProduct(int length) {
     // Write your solution here
-    int[] M = new int[length + 1];
-    M[0] = 1;
-    M[1] = 1;
-    for (int i = 2; i <= length; i++) {
-      int curMax = 1;
-      for (int j = 1; j < i; j++) {
-        curMax = Math.max(curMax, Math.max(i - j, M[i - j]) * j);
+    int[] max = new int[length + 1]; // max[i] represents the max product of i-length rope
+    max[0] = 0;
+    max[1] = 1;
+    for (int i = 2; i <= length; i++) { // i represents the length of the rope
+      for (int j = 1; j < i; j++) { // j represents the cut positions
+        max[i] = Math.max(max[i], Math.max(max[j], j) * (i - j));
       }
-      M[i] = curMax;
     }
-    return M[length];
-  } // TC: O(n ^ 2) SC: O(n)
+    return max[length];
+  }
 }
+// TC: O(n^2) SC: O(n) -> n represents the length of the rope
