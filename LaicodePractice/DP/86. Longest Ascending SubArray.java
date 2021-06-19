@@ -18,7 +18,8 @@ public class Solution {
     if (array.length == 0) {
       return 0;
     }
-    int cur = 1;
+
+    int cur = 1; // cur represents the current length of ascending subarray
     int globalMax = 1;
     for (int i = 1; i < array.length; i++) {
       if (array[i] > array[i - 1]) {
@@ -29,5 +30,6 @@ public class Solution {
       }
     }
     return globalMax;
-  } // TC: O(n) SC: O(1)
+  }
 }
+//TC: O(n) SC: O(1)
