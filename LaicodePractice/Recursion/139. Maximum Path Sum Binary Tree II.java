@@ -46,15 +46,17 @@ public class Solution {
     if (root == null) {
       return 0;
     }
-
+    // step 1: ask lchild and rchild for single path
     int left = DFS(root.left, max);
     int right = DFS(root.right, max);
-
+    // step 2: deal with current level
+    // cut the negative sum
     left = left < 0 ? 0 : left;
     right = right < 0 ? 0 : right;
+    // maintain a globla max of path sum
     max[0] = Math.max(root.key + left + right, max[0]);
-
+    // step 3: return a single path sum to the parent
     return root.key + Math.max(left, right);
   }
 }
-// TC: O(n) SC: O(height)
+// TC: O(n) SC: O(height) -> n represents the # of tree nodes
