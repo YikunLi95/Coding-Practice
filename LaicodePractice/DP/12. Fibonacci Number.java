@@ -20,12 +20,14 @@ public class Solution {
     if (K <= 0) {
       return 0;
     }
-    long[] fibFound = new long[K + 1];
-    fibFound[1] = 1;
-    for (int i = 2; i <= K; i++) {
-      fibFound[i] = fibFound[i - 1] + fibFound[i - 2];
+    // M[i] represents the value of ith fibonacci number
+    long[] M = new long[K + 1];
+    M[0] = 0;
+    M[1] = 1;
+    for (int i = 2; i <= K; i++) { // i represents the ith fibonacci number
+      M[i] = M[i - 1] + M[i - 2];
     }
-    return fibFound[K];
+    return M[K];
   }
 }
 // TC: O(K) SC: O(K)
