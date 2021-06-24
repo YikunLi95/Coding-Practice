@@ -18,15 +18,15 @@ public class Solution {
     if (array.length == 0) {
       return 0;
     }
-
-    int cur = 1; // cur represents the current length of ascending subarray
     int globalMax = 1;
-    for (int i = 1; i < array.length; i++) {
+    // // count represents the current length of ascending subarray
+    int count = 1;
+    for (int i = 1; i < array.length; i++) { // i represents the i-th index of the input array
       if (array[i] > array[i - 1]) {
-        cur += 1;
-        globalMax = Math.max(cur, globalMax);
+        count++;
+        globalMax = Math.max(count, globalMax);
       } else {
-        cur = 1;
+        count = 1;
       }
     }
     return globalMax;
