@@ -31,3 +31,4 @@ public class Solution {
     return res;
   }
 }
+// TC: O(n) -> n represents the length of the array SC: O(1)
