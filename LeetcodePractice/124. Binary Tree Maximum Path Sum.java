@@ -58,4 +58,4 @@ class Solution {
         return root.val + Math.max(left, right);
     }
 }
-// TC: O(n) SC: O(height)
+// TC: O(n) -> n represents the # of nodes in recursion tree SC: O(height)
