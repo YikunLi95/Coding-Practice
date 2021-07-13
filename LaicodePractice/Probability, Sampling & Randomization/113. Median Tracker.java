@@ -53,3 +53,4 @@ public class Solution {
     return smallerHalf.size() + largerHalf.size();
   }
 }
+// TC
