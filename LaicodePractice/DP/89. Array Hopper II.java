@@ -31,4 +31,4 @@ public class Solution {
     return minJump[length - 1];
   }
 }
-// TC: O()
+// TC: O() SC:
