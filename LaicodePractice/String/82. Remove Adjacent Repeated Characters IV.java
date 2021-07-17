@@ -29,3 +29,4 @@ public class Solution {
     return new String(array, 0, end + 1);
   }
 }
+// TC:
