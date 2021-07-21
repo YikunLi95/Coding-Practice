@@ -90,3 +90,4 @@ public class Solution {
     return diff<2;
   }
 }
+// TC:
