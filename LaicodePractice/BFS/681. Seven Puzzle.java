@@ -148,3 +148,4 @@ public class Solution {
     return boardStep.getOrDefault(new Board(values), -1);
   }
 }
+// TC:
