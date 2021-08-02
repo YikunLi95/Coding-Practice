@@ -22,4 +22,5 @@ public class Solution {
     return max[length];
   }
 }
-// TC: O(n^2) SC: O(n) -> n represents the length of the rope
+// TC: O(n^2) -> n represents the length of the rope
+// SC: O(n)
