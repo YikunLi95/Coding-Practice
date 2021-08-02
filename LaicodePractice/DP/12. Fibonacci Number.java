@@ -30,4 +30,5 @@ public class Solution {
     return M[K];
   }
 }
-// TC: O(K) SC: O(K)
+// TC: O(K)
+// SC: O(K)
