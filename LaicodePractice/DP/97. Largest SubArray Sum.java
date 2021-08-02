@@ -24,3 +24,5 @@ public class Solution {
     return globalMax;
   }
 }
+// TC: O()
+// SC: O()
