@@ -44,4 +44,5 @@ public class Solution {
   }
 }
 
-// TC: O(logn) SC: O(1)
+// TC: O(logn)
+// SC: O(1)
