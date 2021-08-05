@@ -40,4 +40,5 @@ public class Solution {
   }
 }
 
-// TC: O(log(row * col)) SC: O(1)
+// TC: O(log(row * col))
+// SC: O(1)
