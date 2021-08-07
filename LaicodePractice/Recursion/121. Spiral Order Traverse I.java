@@ -45,4 +45,5 @@ public class Solution {
     recursiveTraverse(matrix, offset + 1, size - 2, res);
   }
 }
-// TC: O(N * N) SC: O(N)
+// TC: O(N * N)
+// SC: O(N)
