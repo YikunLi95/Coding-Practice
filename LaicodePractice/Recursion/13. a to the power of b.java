@@ -27,4 +27,5 @@ public class Solution {
   }
 }
 
-// TC: O(logb) SC: O(logb)
+// TC: O(logb)
+// SC: O(logb)
