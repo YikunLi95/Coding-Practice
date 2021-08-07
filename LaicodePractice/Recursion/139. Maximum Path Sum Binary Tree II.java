@@ -59,4 +59,5 @@ public class Solution {
     return root.key + Math.max(left, right);
   }
 }
-// TC: O(n) SC: O(height) -> n represents the # of tree nodes
+// TC: O(n) -> n represents the # of tree nodes
+// SC: O(height)
