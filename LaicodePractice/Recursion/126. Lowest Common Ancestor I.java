@@ -51,4 +51,5 @@ public class Solution {
     return left == null ? right : left;
   }
 }
-// TC: O(n) n represents # of nodes SC: O(height)
+// TC: O(n) n represents # of nodes
+// SC: O(height)
