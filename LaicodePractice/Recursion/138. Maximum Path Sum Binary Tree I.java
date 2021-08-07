@@ -54,4 +54,5 @@ public class Solution {
     return root.left == null ? root.key + right : root.key + left;
   }
 }
-// TC: O(n) SC: O(height) -> n represents the # of nodes
+// TC: O(n) -> n represents the # of nodes
+// SC: O(height) 
