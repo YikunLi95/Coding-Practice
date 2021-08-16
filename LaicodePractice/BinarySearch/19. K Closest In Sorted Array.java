@@ -49,4 +49,5 @@ public class Solution {
   }
 }
 
-// TC: O(logn + k) SC: O(1) if k is small; O(k) if k is large
+// TC: O(logn + k)
+// SC: O(1)
