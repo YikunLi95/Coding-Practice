@@ -47,4 +47,5 @@ public class Solution {
     preOrder(root.right, res);
   }
 }
-// TC: O(n) n represents the number of nodes in the recursion tree SC: O(h) h represents the height of the recurtion tree
+// TC: O(n) n represents the number of nodes in the recursion tree
+// SC: O(h) h represents the height of the recurtion tree
