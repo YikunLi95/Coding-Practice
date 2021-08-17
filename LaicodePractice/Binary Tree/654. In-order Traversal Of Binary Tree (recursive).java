@@ -47,4 +47,5 @@ public class Solution {
     inOrder(root.right, res);
   }
 }
-// TC: O(n) SC: O(height)
+// TC: O(n)
+// SC: O(height)
