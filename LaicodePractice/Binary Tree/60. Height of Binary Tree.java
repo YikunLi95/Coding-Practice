@@ -38,4 +38,5 @@ public class Solution {
     return Math.max(leftHeight, rightHeight) + 1;
   }
 }
-// TC: O(n) SC: O(height)
+// TC: O(n)
+// SC: O(height)
