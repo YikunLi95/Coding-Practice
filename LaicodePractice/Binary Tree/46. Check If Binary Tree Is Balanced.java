@@ -66,4 +66,5 @@ public class Solution {
     return Math.max(leftHeight, rightHeight) + 1;
   }
 }
-// TC: O(nlogn) SC: O(logn)
+// TC: O(nlogn)
+// SC: O(logn)
