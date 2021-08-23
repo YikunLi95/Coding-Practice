@@ -67,4 +67,4 @@ public class Solution {
   }
 }
 // TC: O(nlogn)
-// SC: O(logn)
+// SC: O(logn) -> if the input tree is balanced
