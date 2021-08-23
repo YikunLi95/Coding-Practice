@@ -35,4 +35,5 @@ public class Solution {
     return helper(root.left, min, root.key) && helper(root.right, root.key, max);
   }
 }
-// TC: O(n) SC: O(height)
+// TC: O(n)
+// SC: O(height)
