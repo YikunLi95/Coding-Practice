@@ -52,4 +52,5 @@ public class Solution {
            || isTweakedIdentical(one.left, two.right) && isTweakedIdentical(one.right, two.left);
   }
 }
-// TC:
+// TC: O(n^2)
+// SC: O(height)
