@@ -64,4 +64,5 @@ public class Solution {
     return isSymmetric(n1.left, n2.right) && isSymmetric(n1.right, n2.left);
   }
 }
-// TC: O(n) SC: O(height)
+// TC: O(n)
+// SC: O(height)
