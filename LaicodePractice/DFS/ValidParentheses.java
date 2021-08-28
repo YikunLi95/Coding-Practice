@@ -50,4 +50,5 @@ public class Solution {
     }
   }
 }
-// TC: O(2 ^ 2n * 2n) SC: O(2n)
+// TC: O(2 ^ 2n * 2n)
+// SC: O(2n)
