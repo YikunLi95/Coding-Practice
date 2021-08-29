@@ -36,4 +36,5 @@ public class Solution {
     array[y] = tmp;
   }
 }
-// TC: O(n! * n) SC: O(n)
+// TC: O(n! * n)
+// SC: O(n)
