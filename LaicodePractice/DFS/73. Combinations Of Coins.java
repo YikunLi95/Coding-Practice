@@ -55,4 +55,5 @@ public class Solution {
     }
   }
 }
-// TC: O(target ^ n) SC: O(n) where n represents the types of coins
+// TC: O(target ^ n) where n represents the types of coins
+// SC: O(n)
