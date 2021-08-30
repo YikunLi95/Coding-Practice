@@ -29,4 +29,5 @@ class Solution {
         return left == null ? right : left;
     }
 }
-// TC: O(n) # of nodes SC: O(height)
+// TC: O(n) # of nodes
+// SC: O(height)
