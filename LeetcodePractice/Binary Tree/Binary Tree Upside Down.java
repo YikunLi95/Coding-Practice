@@ -26,4 +26,5 @@ class Solution {
         return newRoot;
     }
 }
-// TC:
+// TC: O(n)
+// SC: O(height)
