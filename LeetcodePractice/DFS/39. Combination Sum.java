@@ -56,4 +56,5 @@ class Solution {
         }
     }
 }
-// TC
+// TC: O(N^(T/M + 1)) -> N: number of candidates; T: target value; M: minimal value among candidates
+// SC: O(T/M)
