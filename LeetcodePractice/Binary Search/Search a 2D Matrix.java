@@ -20,4 +20,5 @@ class Solution {
         return false;
     }
 }
-// TC
+// TC: O(logn)
+// SC: O(1)
