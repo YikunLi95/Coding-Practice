@@ -36,4 +36,5 @@ class Solution {
         DFS(array, res, cur, index + 1);
     }
 }
-// TC: O(2 ^ n * n) SC: O(n) -> n represents length of input array
+// TC: O(2 ^ n * n) 
+// SC: O(n) -> n represents length of input array
