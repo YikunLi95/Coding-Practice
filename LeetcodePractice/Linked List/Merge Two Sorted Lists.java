@@ -38,4 +38,5 @@ class Solution {
         return dummy.next;
     }
 }
-// TC: O(n) SC: O(1)
+// TC: O(n) 
+// SC: O(1)
