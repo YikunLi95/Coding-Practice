@@ -48,4 +48,5 @@ class Solution {
         nums[y] = tmp;
     }
 }
-// TC: O(n! * n) SC: O(n) -> n represents the length of input array
+// TC: O(n! * n)
+// SC: O(n) -> n represents the length of input array
