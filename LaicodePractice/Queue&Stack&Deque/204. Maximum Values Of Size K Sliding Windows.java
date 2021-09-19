@@ -34,4 +34,5 @@ public class Solution {
     return max;
   }
 }
-// TC
+// TC: O()
+// SC: O()
