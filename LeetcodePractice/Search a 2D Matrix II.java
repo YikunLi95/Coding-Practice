@@ -15,4 +15,5 @@ class Solution {
         return false;
     }
 }
-// TC: O()
+// TC: O(rows * cols)
+// SC: O(1)
