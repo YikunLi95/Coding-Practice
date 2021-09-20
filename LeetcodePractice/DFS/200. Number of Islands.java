@@ -29,5 +29,5 @@ class Solution {
         DFS(grid, rows, cols, r, c + 1);
     }
 }
-// TC: O()
-// SC: O()
+// TC: O(rows * cols)
+// SC: O(rows * cols)
