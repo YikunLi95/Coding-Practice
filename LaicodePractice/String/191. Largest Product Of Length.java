@@ -53,3 +53,5 @@ public class Solution {
     return map;
   }
 }
+// TC: O()
+// SC: O()
