@@ -27,5 +27,5 @@ public class Solution {
     return n;
   }
 }
-// TC:
-// SC:
+// TC: O()
+// SC: O()
