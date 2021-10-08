@@ -57,4 +57,5 @@ public class Solution {
     return res;
   }
 }
-// TC: O(n) SC: O(n)
+// TC: O(n)
+// SC: O(n)
