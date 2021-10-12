@@ -22,4 +22,5 @@ public class Solution {
     return longest;
   }
 }
-// TC: O()
+// TC: O(n)
+// SC: O(n)
