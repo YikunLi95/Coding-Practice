@@ -28,5 +28,5 @@ class Solution {
         return dummy.next;
     }
 }
-// TC: O(max(m, n))
+// TC: O(m+n)
 // SC: O(1)
