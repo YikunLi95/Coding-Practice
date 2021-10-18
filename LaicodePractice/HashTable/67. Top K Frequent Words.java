@@ -21,20 +21,25 @@ public class Solution {
     if (combo.length == 0) {
       return new String[0];
     }
-    Map<String, Integer> freqMap = getFreqMap(combo);
-    Queue<Map.Entry<String, Integer>> minHeap = new PriorityQueue<>(k, new MyComparator());
+    Map<String, Integer> freqMap = getFreq(combo);
+    PriorityQueue<Map.Entry<String, Integer>> minHeap = new PriorityQueue<>(k, new Comparator<Map.Entry<String, Integer>>() {
+      @Override
+      public int compare(Map.Entry<String, Integer> e1, Map.Entry<String, Integer> e2) {
+        return e1.getValue().compareTo(e2.getValue());
+      }
+    });
     for (Map.Entry<String, Integer> entry : freqMap.entrySet()) {
       if (minHeap.size() < k) {
-        minHeap.offer(entry);
+        minHeap.offer(entry); // TC: O(klogk)
       } else if (entry.getValue() > minHeap.peek().getValue()) {
         minHeap.poll();
-        minHeap.offer(entry);
+        minHeap.offer(entry); // TC: O((n - k)logk)
       }
     }
-    return freqArray(minHeap);
+    return pqToArray(minHeap);
   }
 
-  private Map<String, Integer> getFreqMap(String[] combo) {
+  private Map<String, Integer> getFreq(String[] combo) {
     Map<String, Integer> freqMap = new HashMap<>();
     for (String s : combo) {
       Integer freq = freqMap.get(s);
@@ -45,20 +50,15 @@ public class Solution {
       }
     }
     return freqMap;
-  }
+  } // TC: O(n)
 
-  private String[] freqArray(Queue<Map.Entry<String, Integer>> minHeap) {
-    String[] res = new String[minHeap.size()];
+  private String[] pqToArray(PriorityQueue<Map.Entry<String, Integer>> minHeap) {
+    String[] result = new String[minHeap.size()];
     for (int i = minHeap.size() - 1; i >= 0; i--) {
-      res[i] = minHeap.poll().getKey();
-    }
-    return res;
+      result[i] = minHeap.poll().getKey();
+    } // TC: O(klogk)
+    return result;
   }
 }
-
-class MyComparator implements Comparator<Map.Entry<String, Integer>> {
-  public int compare(Map.Entry<String, Integer> e1, Map.Entry<String, Integer> e2) {
-    return e1.getValue().compareTo(e2.getValue());
-  }
-}
-// TC:
+// TC: O(n + (n+k)logk)
+// SC: O(n + k)
