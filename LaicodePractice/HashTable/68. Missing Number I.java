@@ -15,7 +15,7 @@ public class Solution {
   public int missing(int[] array) {
     // Write your solution here
     int n = array.length + 1;
-    HashSet<Integer> set = new HashSet<Integer>();
+    Set<Integer> set = new HashSet<Integer>();
     for (int num : array) {
       set.add(num);
     }
@@ -27,5 +27,5 @@ public class Solution {
     return n;
   }
 }
-// TC: O()
-// SC: O()
+// TC: O(n)
+// SC: O(n)
