@@ -38,4 +38,4 @@ class Solution {
     }
 }
 // TC: O(4^n)
-// SC: O(4^n)
+// SC: O(n)
