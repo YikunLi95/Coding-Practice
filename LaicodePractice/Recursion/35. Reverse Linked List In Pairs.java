@@ -33,4 +33,5 @@ public class Solution {
     return newHead;
   }
 }
-// TC: O(n) SC: O(n)
+// TC: O(n)
+// SC: O(n)
