@@ -14,23 +14,23 @@
  * }
  */
 class Solution {
-    public int count = 0;
-    
     public int goodNodes(TreeNode root) {
-        DFS(root, Integer.MIN_VALUE);
-        return count;
+        int[] count = new int[1];
+        dfs(root, root.val, count);
+        return count[0];
     }
     
-    private void DFS(TreeNode root, int max) {
+    private void dfs(TreeNode root, int val, int[] count) {
         if (root == null) {
             return;
         }
-        if (root.val >= max) {
-            count++;
+        if (root.val >= val) {
+            count[0]++;
+            val = root.val;
         }
-        DFS(root.left, Math.max(max, root.val));
-        DFS(root.right, Math.max(max, root.val));
+        dfs(root.left, val, count);
+        dfs(root.right, val, count);
     }
 }
 // TC: O(n)
-// SC: O(height)
+// SC: O(n) -> worst case
