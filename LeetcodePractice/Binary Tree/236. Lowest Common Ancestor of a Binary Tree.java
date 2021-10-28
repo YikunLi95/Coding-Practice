@@ -30,4 +30,4 @@ class Solution {
     }
 }
 // TC: O(n) # of nodes
-// SC: O(height)
+// SC: O(n) -> worst case
