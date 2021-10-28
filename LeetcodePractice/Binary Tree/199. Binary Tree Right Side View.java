@@ -33,4 +33,4 @@ class Solution {
     }
 }
 // TC: O(n)
-// SC: O(height)
+// SC: O(n) -> worst case
